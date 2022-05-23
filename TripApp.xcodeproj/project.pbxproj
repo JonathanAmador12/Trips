@@ -11,6 +11,8 @@
 		B4DAF976283B150E007842F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DAF975283B150E007842F3 /* ContentView.swift */; };
 		B4DAF978283B150F007842F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DAF977283B150F007842F3 /* Assets.xcassets */; };
 		B4DAF97B283B150F007842F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DAF97A283B150F007842F3 /* Preview Assets.xcassets */; };
+		B4DAF982283B43C6007842F3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DAF981283B43C6007842F3 /* Menu.swift */; };
+		B4DAF984283B45E9007842F3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DAF983283B45E9007842F3 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B4DAF975283B150E007842F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B4DAF977283B150F007842F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4DAF97A283B150F007842F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B4DAF981283B43C6007842F3 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		B4DAF983283B45E9007842F3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				B4DAF975283B150E007842F3 /* ContentView.swift */,
 				B4DAF977283B150F007842F3 /* Assets.xcassets */,
 				B4DAF979283B150F007842F3 /* Preview Content */,
+				B4DAF981283B43C6007842F3 /* Menu.swift */,
+				B4DAF983283B45E9007842F3 /* SwiftUIView.swift */,
 			);
 			path = TripApp;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DAF982283B43C6007842F3 /* Menu.swift in Sources */,
 				B4DAF976283B150E007842F3 /* ContentView.swift in Sources */,
+				B4DAF984283B45E9007842F3 /* SwiftUIView.swift in Sources */,
 				B4DAF974283B150E007842F3 /* TripAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
