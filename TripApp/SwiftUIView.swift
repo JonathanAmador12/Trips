@@ -16,34 +16,12 @@ struct Home: View {
         Place(id: 4, name: "Laks")
     ]
     
-    var imagePlaces: [PlaceImage] = [
-        PlaceImage(id: 1, palce: "beach 1"),
-        PlaceImage(id: 2, palce: "beach 2"),
-        PlaceImage(id: 3, palce: "beach 3"),
-        PlaceImage(id: 4, palce: "beach 3"),
-        PlaceImage(id: 5, palce: "beach 3"),
-        PlaceImage(id: 6, palce: "beach 3"),
-        PlaceImage(id: 7, palce: "beach 3"),
-        PlaceImage(id: 8, palce: "beach 3"),
-        PlaceImage(id: 9, palce: "beach 3"),
-        PlaceImage(id: 10, palce: "beach 3"),
-    ]
-    
     var destinos: [Destination]  = [
-        Destination(id: 1, name: "California"),
-        Destination(id: 2, name: "California"),
-        Destination(id: 3, name: "California"),
-        Destination(id: 4, name: "California"),
-        Destination(id: 5, name: "California"),
-        Destination(id: 6, name: "California"),
-        Destination(id: 7, name: "California"),
-        Destination(id: 8, name: "California"),
-        Destination(id: 9, name: "California"),
-        Destination(id: 10, name: "California"),
-        Destination(id: 11, name: "California"),
-        Destination(id: 12, name: "California"),
-        Destination(id: 13, name: "California"),
-        Destination(id: 14, name: "California"),
+        Destination(id: 1, name: "California", place: "Haway"),
+        Destination(id: 2, name: "California", place: "pata de perro"),
+        Destination(id: 3, name: "California", place: "en algun lugar"),
+        Destination(id: 4, name: "California", place: "Oxaca"),
+        Destination(id: 5, name: "California", place: "chapas"),
     ]
     
     /*
@@ -64,11 +42,7 @@ struct Home: View {
         ImageInformation(id: 3, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
         ImageInformation(id: 4, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
         ImageInformation(id: 5, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
-        ImageInformation(id: 6, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
-        ImageInformation(id: 7, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
-        ImageInformation(id: 8, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
-        ImageInformation(id: 9, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
-        ImageInformation(id: 10, name: "image 1", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
+        ImageInformation(id: 6, name: "image 2", location: "santa monica", rate: 5.0, imageUrl: "https//algo"),
     ]
     
     @State var selecttionPlace = 1
@@ -109,14 +83,38 @@ struct Home: View {
             
             ScrollView(.horizontal){
                 HStack(spacing: 50){
-                    ForEach(imagePlaces) { imageP in
-                        Text(imageP.palce)
-                            .frame(width: 300, height: 400, alignment: .center)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20.0)
-                                    .stroke(.green, lineWidth: 1.0)
-                                    .shadow(color: .green, radius: 6)
-                            )
+                    ForEach(images) { imageP in
+                        ZStack {
+                            // capa zero -  fondo
+                            Color(.green)
+                                .frame(width: 300, height: 400, alignment: .center)
+                                .clipShape(RoundedRectangle(cornerRadius: 20.0))
+                            
+                            // capa 1 - informaamadore_zz95a
+                            VStack{
+                                Spacer()
+                                VStack(spacing: 20){
+                                    HStack(spacing: 100){
+                                        Text(imageP.name)
+                                        HStack {
+                                            Image(systemName: "star.fill")
+                                                .foregroundColor(.yellow)
+                                            Text("\(imageP.rate, specifier: "%.2f")")
+                                        }
+                                    }
+                                    Text(imageP.location)
+                                        .padding(.trailing, 120)
+                                        .padding(.bottom, 20)
+                                }
+                                .frame(width: 250, height: 100)
+                                .background(Color.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .shadow(color: .black, radius: 5)
+                                Spacer()
+                                    .frame(height: 50)
+                            }
+                            
+                        }
                     }
                 }
                 .frame(height: 400)
@@ -130,13 +128,26 @@ struct Home: View {
             ScrollView(.horizontal){
                 HStack(spacing: 40){
                     ForEach(destinos) { destino in
-                        Text(destino.name)
-                            .frame(width: 200, height: 120, alignment: .center)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20.0)
-                                    .stroke(.green, lineWidth: 1.0)
-                                    .shadow(color: .green, radius: 6)
+                        ZStack {
+                            Text("")
+                                .frame(width: 250, height: 120, alignment: .center)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20.0)
+                                        .stroke(.green, lineWidth: 1.0)
+                                        .shadow(color: .green, radius: 6)
                             )
+                            HStack(spacing: 20) {
+                                Text("")
+                                    .frame(width: 70, height: 70)
+                                    .background(Color.blue)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .shadow(color: .green, radius: 6.0)
+                                VStack(alignment: .leading){
+                                    Text(destino.name)
+                                    Text(destino.place)
+                                }
+                            }
+                        }
                     }
                 }
                 .frame(height: 180)
@@ -153,14 +164,11 @@ struct Place: Identifiable {
     var name: String
 }
 
-struct PlaceImage: Identifiable {
-    var id: Int
-    var palce: String
-}
 
 struct Destination: Identifiable {
     var id: Int
     var name: String
+    var place: String
 }
 
 struct ImageInformation: Identifiable {
