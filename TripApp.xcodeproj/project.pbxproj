@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B48209D0283EADF80030F49B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209CF283EADF80030F49B /* Place.swift */; };
+		B48209D2283EAE500030F49B /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209D1283EAE500030F49B /* Destination.swift */; };
+		B48209D4283EAE8E0030F49B /* ImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209D3283EAE8E0030F49B /* ImageInformation.swift */; };
+		B48209D6283EAFCA0030F49B /* MockPlace.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D5283EAFCA0030F49B /* MockPlace.json */; };
+		B48209DA283EB2CF0030F49B /* MockImage.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D9283EB2CF0030F49B /* MockImage.json */; };
+		B48209DC283EB5EA0030F49B /* MockDestinos.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209DB283EB5EA0030F49B /* MockDestinos.json */; };
+		B48209E0283EBAE90030F49B /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209DF283EBAE90030F49B /* PlaceViewModel.swift */; };
+		B48209E2283EBCAF0030F49B /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E1283EBCAF0030F49B /* PlaceService.swift */; };
+		B48209E4283ED0D50030F49B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E3283ED0D50030F49B /* APIError.swift */; };
+		B48209E7283EF1070030F49B /* ViewModelDestino.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E6283EF1070030F49B /* ViewModelDestino.swift */; };
+		B48209E9283EF1CD0030F49B /* ServiceDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E8283EF1CD0030F49B /* ServiceDestination.swift */; };
+		B48209EB283EFEDD0030F49B /* ServiceImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */; };
+		B48209ED283F05BB0030F49B /* ViewModelImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */; };
 		B4DAF974283B150E007842F3 /* TripAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DAF973283B150E007842F3 /* TripAppApp.swift */; };
 		B4DAF976283B150E007842F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DAF975283B150E007842F3 /* ContentView.swift */; };
 		B4DAF978283B150F007842F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DAF977283B150F007842F3 /* Assets.xcassets */; };
@@ -16,6 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B48209CF283EADF80030F49B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		B48209D1283EAE500030F49B /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		B48209D3283EAE8E0030F49B /* ImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInformation.swift; sourceTree = "<group>"; };
+		B48209D5283EAFCA0030F49B /* MockPlace.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPlace.json; sourceTree = "<group>"; };
+		B48209D9283EB2CF0030F49B /* MockImage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockImage.json; sourceTree = "<group>"; };
+		B48209DB283EB5EA0030F49B /* MockDestinos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDestinos.json; sourceTree = "<group>"; };
+		B48209DF283EBAE90030F49B /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		B48209E1283EBCAF0030F49B /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		B48209E3283ED0D50030F49B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B48209E6283EF1070030F49B /* ViewModelDestino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDestino.swift; sourceTree = "<group>"; };
+		B48209E8283EF1CD0030F49B /* ServiceDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDestination.swift; sourceTree = "<group>"; };
+		B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceImageInformation.swift; sourceTree = "<group>"; };
+		B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelImageInformation.swift; sourceTree = "<group>"; };
 		B4DAF970283B150E007842F3 /* TripApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DAF973283B150E007842F3 /* TripAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAppApp.swift; sourceTree = "<group>"; };
 		B4DAF975283B150E007842F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +62,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B48209CD283EAD730030F49B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B48209CF283EADF80030F49B /* Place.swift */,
+				B48209D1283EAE500030F49B /* Destination.swift */,
+				B48209D3283EAE8E0030F49B /* ImageInformation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B48209CE283EAD9C0030F49B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4DAF981283B43C6007842F3 /* Menu.swift */,
+				B4DAF983283B45E9007842F3 /* SwiftUIView.swift */,
+				B4DAF975283B150E007842F3 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B48209DD283EBA410030F49B /* ServiceViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B48209E1283EBCAF0030F49B /* PlaceService.swift */,
+				B48209E8283EF1CD0030F49B /* ServiceDestination.swift */,
+				B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */,
+			);
+			path = ServiceViewModel;
+			sourceTree = "<group>";
+		};
+		B48209DE283EBAAC0030F49B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B48209DF283EBAE90030F49B /* PlaceViewModel.swift */,
+				B48209E6283EF1070030F49B /* ViewModelDestino.swift */,
+				B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B48209E5283EED000030F49B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B48209D5283EAFCA0030F49B /* MockPlace.json */,
+				B48209D9283EB2CF0030F49B /* MockImage.json */,
+				B48209DB283EB5EA0030F49B /* MockDestinos.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		B4DAF967283B150E007842F3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +132,14 @@
 			isa = PBXGroup;
 			children = (
 				B4DAF973283B150E007842F3 /* TripAppApp.swift */,
-				B4DAF975283B150E007842F3 /* ContentView.swift */,
+				B48209DE283EBAAC0030F49B /* ViewModels */,
+				B48209DD283EBA410030F49B /* ServiceViewModel */,
+				B48209CD283EAD730030F49B /* Models */,
+				B48209CE283EAD9C0030F49B /* Views */,
+				B48209E5283EED000030F49B /* Mocks */,
 				B4DAF977283B150F007842F3 /* Assets.xcassets */,
 				B4DAF979283B150F007842F3 /* Preview Content */,
-				B4DAF981283B43C6007842F3 /* Menu.swift */,
-				B4DAF983283B45E9007842F3 /* SwiftUIView.swift */,
+				B48209E3283ED0D50030F49B /* APIError.swift */,
 			);
 			path = TripApp;
 			sourceTree = "<group>";
@@ -132,7 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DAF97B283B150F007842F3 /* Preview Assets.xcassets in Resources */,
+				B48209DC283EB5EA0030F49B /* MockDestinos.json in Resources */,
+				B48209D6283EAFCA0030F49B /* MockPlace.json in Resources */,
 				B4DAF978283B150F007842F3 /* Assets.xcassets in Resources */,
+				B48209DA283EB2CF0030F49B /* MockImage.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,10 +225,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48209E0283EBAE90030F49B /* PlaceViewModel.swift in Sources */,
+				B48209ED283F05BB0030F49B /* ViewModelImageInformation.swift in Sources */,
 				B4DAF982283B43C6007842F3 /* Menu.swift in Sources */,
 				B4DAF976283B150E007842F3 /* ContentView.swift in Sources */,
+				B48209E4283ED0D50030F49B /* APIError.swift in Sources */,
+				B48209D4283EAE8E0030F49B /* ImageInformation.swift in Sources */,
+				B48209E2283EBCAF0030F49B /* PlaceService.swift in Sources */,
+				B48209E9283EF1CD0030F49B /* ServiceDestination.swift in Sources */,
+				B48209D2283EAE500030F49B /* Destination.swift in Sources */,
 				B4DAF984283B45E9007842F3 /* SwiftUIView.swift in Sources */,
 				B4DAF974283B150E007842F3 /* TripAppApp.swift in Sources */,
+				B48209E7283EF1070030F49B /* ViewModelDestino.swift in Sources */,
+				B48209D0283EADF80030F49B /* Place.swift in Sources */,
+				B48209EB283EFEDD0030F49B /* ServiceImageInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

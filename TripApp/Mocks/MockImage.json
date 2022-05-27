@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 5.2,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 2,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 10.0,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 3,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 5.0,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 4,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 5.0,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 5,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 5.0,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 6,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 5.0,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 7,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 5.0,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 8,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 5.0,
+        "imageUrl": "https//algo"
+    },
+    {
+        "id": 9,
+        "name": "image 1",
+        "location": "santa monica",
+        "rate": 9.0,
+        "imageUrl": "https//algo"
+    },
+]

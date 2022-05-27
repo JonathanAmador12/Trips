@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Beach"
+    },
+    {
+        "id": 2,
+        "name": "Mountain"
+    },
+    {
+        "id": 3,
+        "name": "Waterfalls"
+    },
+    {
+        "id": 4,
+        "name": "Lake"
+    }
+]
