@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct Menu: View {
+    
     var body: some View {
         TabView{
-            Home()
+            HomeView()
                 .tabItem {
                     Text("Home")
                     Image(systemName: "homekit")

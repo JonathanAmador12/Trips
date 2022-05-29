@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct Home: View {
+    var places: [Place]
+    var destination: [Destination]
+    var imag: [ImageInformation]
+    
     @State var selecttionPlace = 1
-    @ObservedObject var possiblePlaces = PlaceViewModel()
-    @ObservedObject var possibleDestinations = ViewModelDestino()
-    @ObservedObject var possibleImage = ViewModelImageInformation()
     
     var body: some View {
         
@@ -32,7 +33,7 @@ struct Home: View {
             
             ScrollView(.horizontal){
                 HStack(spacing:  50){
-                    ForEach(possiblePlaces.places) { place in
+                    ForEach(places) { place in
                         Button(action: {
                             selecttionPlace = place.id
                         }) {
@@ -46,13 +47,10 @@ struct Home: View {
                 .frame(height: 70)
             }
             .padding(.bottom, 20)
-            .onAppear{
-                possiblePlaces.getPlace()
-            }
             
             ScrollView(.horizontal){
                 HStack(spacing: 50){
-                    ForEach(possibleImage.images) { imageP in
+                    ForEach(imag) { imageP in
                         ZStack {
                             // capa zero -  fondo
                             Color(.green)
@@ -89,51 +87,40 @@ struct Home: View {
                 .frame(height: 400)
             }
             .padding(.bottom, 40)
-            .onAppear{
-                possibleImage.getImage()
-            }
             
             Text("Top Destination")
                 .font(.title3)
                 .fontWeight(.heavy)
             
             ScrollView(.horizontal){
-                if possibleDestinations.isLoading {
-                    ProgressView()
-                } else {
-                    HStack(spacing: 40){
-                        ForEach(possibleDestinations.destinations) { destino in
-                            ZStack {
+                HStack(spacing: 40){
+                    ForEach(destination) { destino in
+                        ZStack {
+                            Text("")
+                                .frame(width: 250, height: 120, alignment: .center)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20.0)
+                                        .stroke(.green, lineWidth: 1.0)
+                                        .shadow(color: .green, radius: 6)
+                            )
+                            HStack(spacing: 20) {
                                 Text("")
-                                    .frame(width: 250, height: 120, alignment: .center)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 20.0)
-                                            .stroke(.green, lineWidth: 1.0)
-                                            .shadow(color: .green, radius: 6)
-                                )
-                                HStack(spacing: 20) {
-                                    Text("")
-                                        .frame(width: 70, height: 70)
-                                        .background(Color.blue)
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                        .shadow(color: .green, radius: 6.0)
-                                    VStack(alignment: .leading){
-                                        Text(destino.name)
-                                            .foregroundColor(.blue)
-                                        Text(destino.place)
-                                            .foregroundColor(.blue)
-                                    }
+                                    .frame(width: 70, height: 70)
+                                    .background(Color.blue)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .shadow(color: .green, radius: 6.0)
+                                VStack(alignment: .leading){
+                                    Text(destino.name)
+                                        .foregroundColor(.blue)
+                                    Text(destino.place)
+                                        .foregroundColor(.blue)
                                 }
                             }
                         }
                     }
-                    .frame(height: 180)
                 }
+                .frame(height: 180)
             }
-            .onAppear{
-                possibleDestinations.getDestination()
-            }
-            
             Spacer()
         }
         .padding(.horizontal, 20)
@@ -141,7 +128,19 @@ struct Home: View {
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        Home()
+        let places: [Place] = [
+            Place(id: 1, name: "santa monica"),
+            Place(id: 2, name: "san arnol")
+        ]
+        let destination: [Destination] = [
+            Destination(id: 1, name: "mar persico", place: "rusia"),
+            Destination(id: 2, name: "mar mediterranio", place: "canada")
+        ]
+        let image: [ImageInformation] = [
+            ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "https algo")
+        ]
+        Home(places: places, destination: destination, imag: image)
     }
 }
