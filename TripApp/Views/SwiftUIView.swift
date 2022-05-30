@@ -14,6 +14,8 @@ struct Home: View {
     
     @State var selecttionPlace = 1
     
+    @Binding var isSearchBarActive: Bool
+    
     var body: some View {
         
         VStack(alignment: .leading){
@@ -22,7 +24,9 @@ struct Home: View {
                     .font(.title)
                     .fontWeight(.heavy)
                 HStack{
-                    Button(action: {}) {
+                    Button(action: {
+                        isSearchBarActive = true
+                    }) {
                         Image(systemName: "magnifyingglass")
                     }
                     Button(action: {}) {
@@ -141,6 +145,7 @@ struct SwiftUIView_Previews: PreviewProvider {
         let image: [ImageInformation] = [
             ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "https algo")
         ]
-        Home(places: places, destination: destination, imag: image)
+        
+        Home(places: places, destination: destination, imag: image, isSearchBarActive: .constant(false))
     }
 }

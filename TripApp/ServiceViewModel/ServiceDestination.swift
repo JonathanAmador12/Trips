@@ -28,7 +28,7 @@ class ServiceDestination{
             
             let destinations = try JSONDecoder().decode([Destination].self, from: mockData)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 let result: Result<[Destination], APIError> = .success(destinations)
                 handler(result)
             }
