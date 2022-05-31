@@ -10,11 +10,13 @@ import SwiftUI
 struct DestinationView: View {
     
     var destinations: [Destination]
-    
+    @State var idPlace: Bool = false
     var body: some View {
         VStack(spacing: 5){
             ForEach(destinations) { newVista in
-                Button(action: {}) {
+                Button(action: {
+                    self.idPlace = true
+                }) {
                     HStack {
                         HStack {
                             Image(systemName: "photo")
@@ -32,6 +34,12 @@ struct DestinationView: View {
                 RoundedRectangle(cornerRadius: 5)
             )
             Spacer()
+            NavigationLink(isActive: $idPlace) {
+                ViewOfNavigationLink()
+            } label: {
+                EmptyView()
+            }
+
         }
     }
 }
