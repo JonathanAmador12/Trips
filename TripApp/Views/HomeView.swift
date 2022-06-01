@@ -34,7 +34,7 @@ struct HomeView: View {
         }
         .onAppear{
             possiblePlaces.getPlace()
-            possibleDestinations.getDestination()
+            possibleDestinations.getDestination2()
             possibleImage.getImage()
         }
     }
