@@ -46,26 +46,20 @@ struct SearchView: View {
                 }
                 .padding(.top, 1)
                 .onChange(of: search) { newValue in
+                    viewModelDestination.getDestination(place: search)
                     print("arnol")
                 }
                 .padding(2)
                 
                 
                 ScrollView{
-                    DestinationView(destinations: viewModelDestination.destinations)
+                    DestinationView(destinations: viewModelDestination.destinations);
                 }
                 
-                .onAppear{
-                    viewModelDestination.getDestination()
-                }
                 Spacer()
             }
             .frame(width: 390)
             .background(Color.white)
-            .onAppear{
-                // TODO: Eliminar despues de hacer una pruebas
-                viewModelDestination.getDestination()
-            }
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }

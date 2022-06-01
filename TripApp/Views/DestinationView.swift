@@ -10,7 +10,9 @@ import SwiftUI
 struct DestinationView: View {
     
     var destinations: [Destination]
+    
     @State var idPlace: Bool = false
+    
     var body: some View {
         VStack(spacing: 5){
             ForEach(destinations) { newVista in
