@@ -1,0 +1,24 @@
+{
+    "id": 1,
+    "specificPlace": "la patagonia",
+    "namePlace": "Canada",
+    "description": "La Patagonia es una región que abarca el extenso extremo austral de Sudamérica, que comparten Argentina y Chile, con la Cordillera de los Andes como su línea divisoria. El lado argentino tiene estepas áridas, praderas y desiertos, mientras que el lado chileno tiene fiordos glaciales y bosques pluviales templados. La famosa carretera argentina RN-40 pasa cerca del monte Fitz Roy y el glaciar Perito Moreno en el Parque Nacional Los Glaciares.",
+    "reviews": [
+        {
+            "id": 1,
+            "image": "chemms",
+            "name": "El Arnol",
+            "fecha": "20-11-1991",
+            "review": "La Patagonia es una región que abarca el extenso extremo austral de Sudamérica, que comparten Argentina y Chile, con la Cordillera de los Andes como su línea divisoria. El lado argentino tiene estepas áridas, praderas y desiertos, mientras que el lado chileno tiene fiordos glaciales y bosques pluviales templados. La famosa carretera argentina RN-40 pasa cerca del monte Fitz Roy y el glaciar Perito Moreno en el Parque Nacional Los Glaciares.",
+            "isLikeIt": true
+        },
+        {
+            "id": 2,
+            "image": "yo",
+            "name": "El Arnol",
+            "fecha": "20-11-1991",
+            "review": "La Patagonia es una región que abarca el extenso extremo austral de Sudamérica, que comparten Argentina y Chile, con la Cordillera de los Andes como su línea divisoria. El lado argentino tiene estepas áridas, praderas y desiertos, mientras que el lado chileno tiene fiordos glaciales y bosques pluviales templados. La famosa carretera argentina RN-40 pasa cerca del monte Fitz Roy y el glaciar Perito Moreno en el Parque Nacional Los Glaciares.",
+            "isLikeIt": true
+        }
+    ]
+}
