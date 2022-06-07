@@ -16,9 +16,9 @@ struct DestinationView: View {
     var body: some View {
         VStack(spacing: 5){
             ForEach(destinations) { newVista in
-                Button(action: {
-                    self.idPlace = true
-                }) {
+                NavigationLink {
+                    DestinationDeatil()
+                } label: {
                     HStack {
                         HStack {
                             Image(systemName: "photo")
@@ -36,12 +36,6 @@ struct DestinationView: View {
                 RoundedRectangle(cornerRadius: 5)
             )
             Spacer()
-            NavigationLink(isActive: $idPlace) {
-                ViewOfNavigationLink()
-            } label: {
-                EmptyView()
-            }
-
         }
     }
 }

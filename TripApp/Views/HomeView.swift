@@ -23,8 +23,6 @@ struct HomeView: View {
                 destination: possibleDestinations.destinations,
                 imag: possibleImage.images,
                 isSearchBarActive: $isSearchBarActive
-                
-                
             )
             
             // layer 2

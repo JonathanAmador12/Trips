@@ -58,7 +58,6 @@ struct SearchView: View {
                 
                 Spacer()
             }
-            .frame(width: 390)
             .background(Color.white)
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
