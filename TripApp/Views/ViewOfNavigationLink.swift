@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 //struct Detail2: Identifiable {
 //    var id: Int
@@ -59,7 +60,7 @@ struct ViewOfNavigationLink: View {
             // layer one
             VStack {
                 ZStack {
-                    Image("islasCayman")
+                    KFImage(URL(string: deatils.imageUrl))
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 400, height: 400)
@@ -106,7 +107,7 @@ struct ViewOfNavigationLink: View {
                     ForEach(deatils.reviews) { review in
                         HStack(spacing: 16){
                             VStack {
-                                Image(review.image)
+                                KFImage(URL(string: review.image))
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 80, height: 80)
@@ -160,6 +161,7 @@ struct ViewOfNavigationLink_Previews: PreviewProvider {
         
         let place: DestinationDetailModel = DestinationDetailModel(
             id: 1,
+            imageUrl: "http://localhost:9000/trips2/mady.jpeg",
             specificPlace: "algo 1",
             namePlace: "algo 2",
             description: "cool",
