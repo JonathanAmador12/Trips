@@ -9,6 +9,7 @@ import Foundation
 
 struct DestinationDetailModel: Identifiable, Decodable {
     var id: Int
+    var imageUrl: String
     var specificPlace: String
     var namePlace: String
     var description: String

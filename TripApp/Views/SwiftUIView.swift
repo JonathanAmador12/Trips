@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct Home: View {
     var places: [Place]
@@ -57,7 +58,7 @@ struct Home: View {
                     ForEach(imag) { imageP in
                         ZStack {
                             // capa zero -  fondo
-                            Color(.green)
+                            KFImage(URL(string: imageP.imageUrl))
                                 .frame(width: 300, height: 400, alignment: .center)
                                 .clipShape(RoundedRectangle(cornerRadius: 20.0))
                             
@@ -97,22 +98,25 @@ struct Home: View {
                 .fontWeight(.heavy)
             
             ScrollView(.horizontal){
-                HStack(spacing: 40){
+                HStack(spacing: 40) {
                     ForEach(destination) { destino in
                         ZStack {
-                            Text("")
-                                .frame(width: 250, height: 120, alignment: .center)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20.0)
-                                        .stroke(.green, lineWidth: 1.0)
-                                        .shadow(color: .green, radius: 6)
-                            )
+                            Color.gray.opacity(0.1)
+                                .frame(width: 280, height: 120)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 10)
+                                )
+                                
+
                             HStack(spacing: 20) {
-                                Text("")
-                                    .frame(width: 70, height: 70)
-                                    .background(Color.blue)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .shadow(color: .green, radius: 6.0)
+                                KFImage(URL(string: destino.imageUrl))
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 100, height: 100)
+                                    .clipShape(
+                                        RoundedRectangle(cornerRadius: 20.0)
+                                    )
+                                
                                 VStack(alignment: .leading){
                                     Text(destino.name)
                                         .foregroundColor(.blue)
@@ -139,8 +143,8 @@ struct SwiftUIView_Previews: PreviewProvider {
             Place(id: 2, name: "san arnol")
         ]
         let destination: [Destination] = [
-            Destination(id: 1, name: "mar persico", place: "rusia"),
-            Destination(id: 2, name: "mar mediterranio", place: "canada")
+            Destination(id: 1, name: "mar persico", place: "rusia", imageUrl: "algo"),
+            Destination(id: 2, name: "mar mediterranio", place: "canada", imageUrl: "algo2")
         ]
         let image: [ImageInformation] = [
             ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "https algo")

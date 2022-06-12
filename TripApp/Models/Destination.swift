@@ -11,4 +11,5 @@ struct Destination: Identifiable, Decodable {
     var id: Int
     var name: String
     var place: String
+    var imageUrl: String
 }
