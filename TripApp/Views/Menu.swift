@@ -10,10 +10,28 @@ import SwiftUI
 struct Menu: View {
     
     var body: some View {
-        NavigationView{
-            HomeView()
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
+        TabView{
+            NavigationView{
+                HomeView()
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
+            }.navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
+                Text("home")
+                Image(systemName: "house.circle.fill")
+            }
+            
+            Text("Favvoritos")
+                .tabItem {
+                    Image(systemName: "bolt.heart.fill")
+                    Text("favorites")
+                }
+            
+            Text("recommended")
+                .tabItem {
+                Image(systemName: "hand.thumbsup.fill")
+                Text("recommended")
+            }
         }
     }
 }

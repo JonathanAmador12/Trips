@@ -20,10 +20,11 @@ struct Home: View {
     var body: some View {
         
         VStack(alignment: .leading){
-            HStack(spacing: 200){
+            HStack{
                 Text("Discover")
                     .font(.title)
                     .fontWeight(.heavy)
+                Spacer()
                 HStack{
                     Button(action: {
                         isSearchBarActive = true
@@ -56,36 +57,41 @@ struct Home: View {
             ScrollView(.horizontal){
                 HStack(spacing: 50){
                     ForEach(imag) { imageP in
-                        ZStack {
-                            // capa zero -  fondo
-                            KFImage(URL(string: imageP.imageUrl))
-                                .frame(width: 300, height: 400, alignment: .center)
-                                .clipShape(RoundedRectangle(cornerRadius: 20.0))
-                            
-                            // capa 1 - informaamadore_zz95a
-                            VStack{
-                                Spacer()
-                                VStack(spacing: 20){
-                                    HStack(spacing: 100){
-                                        Text(imageP.name)
-                                        HStack {
-                                            Image(systemName: "star.fill")
-                                                .foregroundColor(.yellow)
-                                            Text("\(imageP.rate, specifier: "%.2f")")
+                        
+                        NavigationLink {
+                            DestinationDeatil()
+                        } label: {
+                            ZStack {
+                                // capa zero -  fondo
+                                KFImage(URL(string: imageP.imageUrl))
+                                    .frame(width: 300, height: 400, alignment: .center)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20.0))
+                                
+                                // capa 1 - informaamadore_zz95a
+                                VStack{
+                                    Spacer()
+                                    VStack(spacing: 20){
+                                        HStack(spacing: 100){
+                                            Text(imageP.name)
+                                            HStack {
+                                                Image(systemName: "star.fill")
+                                                    .foregroundColor(.yellow)
+                                                Text("\(imageP.rate, specifier: "%.2f")")
+                                            }
                                         }
+                                        Text(imageP.location)
+                                            .padding(.trailing, 120)
+                                            .padding(.bottom, 20)
                                     }
-                                    Text(imageP.location)
-                                        .padding(.trailing, 120)
-                                        .padding(.bottom, 20)
+                                    .frame(width: 250, height: 100)
+                                    .background(Color.white)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                                    .shadow(color: .black, radius: 5)
+                                    Spacer()
+                                        .frame(height: 50)
                                 }
-                                .frame(width: 250, height: 100)
-                                .background(Color.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 20))
-                                .shadow(color: .black, radius: 5)
-                                Spacer()
-                                    .frame(height: 50)
+                                
                             }
-                            
                         }
                     }
                 }
@@ -100,28 +106,32 @@ struct Home: View {
             ScrollView(.horizontal){
                 HStack(spacing: 40) {
                     ForEach(destination) { destino in
-                        ZStack {
-                            Color.gray.opacity(0.1)
-                                .frame(width: 280, height: 120)
-                                .clipShape(
-                                    RoundedRectangle(cornerRadius: 10)
-                                )
-                                
-
-                            HStack(spacing: 20) {
-                                KFImage(URL(string: destino.imageUrl))
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 100, height: 100)
+                        NavigationLink {
+                            DestinationDeatil()
+                        } label: {
+                            ZStack {
+                                Color.gray.opacity(0.1)
+                                    .frame(width: 280, height: 120)
                                     .clipShape(
-                                        RoundedRectangle(cornerRadius: 20.0)
+                                        RoundedRectangle(cornerRadius: 10)
                                     )
-                                
-                                VStack(alignment: .leading){
-                                    Text(destino.name)
-                                        .foregroundColor(.blue)
-                                    Text(destino.place)
-                                        .foregroundColor(.blue)
+                                    
+
+                                HStack(spacing: 20) {
+                                    KFImage(URL(string: destino.imageUrl))
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 100, height: 100)
+                                        .clipShape(
+                                            RoundedRectangle(cornerRadius: 20.0)
+                                        )
+                                    
+                                    VStack(alignment: .leading){
+                                        Text(destino.name)
+                                            .foregroundColor(.blue)
+                                        Text(destino.place)
+                                            .foregroundColor(.blue)
+                                    }
                                 }
                             }
                         }
@@ -143,13 +153,18 @@ struct SwiftUIView_Previews: PreviewProvider {
             Place(id: 2, name: "san arnol")
         ]
         let destination: [Destination] = [
-            Destination(id: 1, name: "mar persico", place: "rusia", imageUrl: "algo"),
-            Destination(id: 2, name: "mar mediterranio", place: "canada", imageUrl: "algo2")
+            Destination(id: 1, name: "mar persico", place: "rusia", imageUrl: "http://localhost:9000/trips2/cancun.jpeg"),
+            Destination(id: 2, name: "mar mediterranio", place: "canada", imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
         ]
         let image: [ImageInformation] = [
-            ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "https algo")
+            ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
         ]
         
-        Home(places: places, destination: destination, imag: image, isSearchBarActive: .constant(false))
+        NavigationView {
+            Home(places: places, destination: destination, imag: image, isSearchBarActive: .constant(false))
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
