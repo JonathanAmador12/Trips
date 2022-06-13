@@ -29,7 +29,8 @@ class ServicePlace{
                 return
             }
             
-            let places = try JSONDecoder().decode([Place].self, from: mockData)
+            let decoder = JSONDecoder()
+            let places = try decoder.decode([Place].self, from: mockData)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 let result: Result<[Place], APIError> = .success(places)

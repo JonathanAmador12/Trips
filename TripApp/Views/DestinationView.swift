@@ -46,6 +46,10 @@ struct DestinationView_Previews: PreviewProvider {
             Destination(id: 1, name: "no importa", place: "everywhere", imageUrl: "algo3"),
             Destination(id: 2, name: "no importa", place: "everywhwre", imageUrl: "algo4")
         ]
-        DestinationView(destinations: destinations)
+        NavigationView {
+            DestinationView(destinations: destinations)
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
+        }
     }
 }

@@ -8,48 +8,6 @@
 import SwiftUI
 import Kingfisher
 
-//struct Detail2: Identifiable {
-//    var id: Int
-//    var spesificPlace: String
-//    var namePlace: String
-//    var description: String
-//    var reviews: [Review]
-//}
-//
-//struct Review: Identifiable {
-//    var id: Int
-//    var image: String
-//    var nombre: String
-//    var fecha: String
-//    var review: String
-//    var isLikeIt: Bool
-//}
-//
-//var place: Detail2 = Detail2(
-//    id: 1,
-//    spesificPlace: "la patagonia",
-//    namePlace: "Canada",
-//    description: "La Patagonia es una región que abarca el extenso extremo austral de Sudamérica, que comparten Argentina y Chile, con la Cordillera de los Andes como su línea divisoria. El lado argentino tiene estepas áridas, praderas y desiertos, mientras que el lado chileno tiene fiordos glaciales y bosques pluviales templados. La famosa carretera argentina RN-40 pasa cerca del monte Fitz Roy y el glaciar Perito Moreno en el Parque Nacional Los Glaciares.",
-//    reviews: [
-//        Review(
-//            id: 1,
-//            image: "chemms",
-//            nombre: "El Arnol",
-//            fecha: "20-11-1991",
-//            review: "La Patagonia es una región que abarca el extenso extremo austral de Sudamérica, que comparten Argentina y Chile, con la Cordillera de los Andes como su línea divisoria. El lado argentino tiene estepas áridas, praderas y desiertos, mientras que el lado chileno tiene fiordos glaciales y bosques pluviales templados. La famosa carretera argentina RN-40 pasa cerca del monte Fitz Roy y el glaciar Perito Moreno en el Parque Nacional Los Glaciares.",
-//            isLikeIt: true
-//        ),
-//        Review(
-//            id: 2,
-//            image: "yo",
-//            nombre: "El Arnol",
-//            fecha: "20-11-1991",
-//            review: "La Patagonia es una región que abarca el extenso extremo austral de Sudamérica, que comparten Argentina y Chile, con la Cordillera de los Andes como su línea divisoria. El lado argentino tiene estepas áridas, praderas y desiertos, mientras que el lado chileno tiene fiordos glaciales y bosques pluviales templados. La famosa carretera argentina RN-40 pasa cerca del monte Fitz Roy y el glaciar Perito Moreno en el Parque Nacional Los Glaciares.",
-//            isLikeIt: true
-//        )
-//    ]
-//)
-
 struct ViewOfNavigationLink: View {
     
     var deatils: DestinationDetailModel

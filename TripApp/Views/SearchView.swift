@@ -59,6 +59,7 @@ struct SearchView: View {
             
             Spacer()
         }
+        .padding(.horizontal)
         .onAppear(perform: {
             isFocused = true
         })
