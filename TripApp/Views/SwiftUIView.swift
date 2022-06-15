@@ -148,20 +148,30 @@ struct Home: View {
 struct SwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let places: [Place] = [
-            Place(id: 1, name: "santa monica"),
-            Place(id: 2, name: "san arnol")
-        ]
-        let destination: [Destination] = [
-            Destination(id: 1, name: "mar persico", place: "rusia", imageUrl: "http://localhost:9000/trips2/cancun.jpeg"),
-            Destination(id: 2, name: "mar mediterranio", place: "canada", imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
-        ]
-        let image: [ImageInformation] = [
-            ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
-        ]
+//        let places: [Place] = [
+//            Place(id: 1, name: "santa monica"),
+//            Place(id: 2, name: "san arnol")
+//        ]
+        let places: [Place] = getDataListFromMockFile(fileName: "MockPlace") ?? []
+        let destination: [Destination] = getDataListFromMockFile(fileName: "MockDestinos") ?? []
+        let image: [ImageInformation] = getDataListFromMockFile(fileName: "MockImage") ?? []
+        
+
+//        let destination: [Destination] = [
+//            Destination(id: 1, name: "mar persico", place: "rusia", imageUrl: "http://localhost:9000/trips2/cancun.jpeg"),
+//            Destination(id: 2, name: "mar mediterranio", place: "canada", imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
+//        ]
+//        let image: [ImageInformation] = [
+//            ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
+//        ]
         
         NavigationView {
-            Home(places: places, destination: destination, imag: image, isSearchBarActive: .constant(false))
+            Home(
+                places: places,
+                destination: destination,
+                imag: image,
+                isSearchBarActive: .constant(false)
+            )
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
         }
