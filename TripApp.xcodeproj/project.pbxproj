@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40E3D852857FA46007931AD /* mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E3D842857FA46007931AD /* mocks.swift */; };
 		B40F686E284E7E91004595DB /* MockPlaceWithReview.json in Resources */ = {isa = PBXBuildFile; fileRef = B40F686D284E7E91004595DB /* MockPlaceWithReview.json */; };
 		B40F6870284E83CC004595DB /* ModeloDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40F686F284E83CC004595DB /* ModeloDetailView.swift */; };
 		B40F6872284E8C0D004595DB /* DestinationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40F6871284E8C0D004595DB /* DestinationDetailViewModel.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B40E3D842857FA46007931AD /* mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mocks.swift; sourceTree = "<group>"; };
 		B40F686D284E7E91004595DB /* MockPlaceWithReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPlaceWithReview.json; sourceTree = "<group>"; };
 		B40F686F284E83CC004595DB /* ModeloDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDetailView.swift; sourceTree = "<group>"; };
 		B40F6871284E8C0D004595DB /* DestinationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationDetailViewModel.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B40E3D832857F9EA007931AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B40E3D842857FA46007931AD /* mocks.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B48209CD283EAD730030F49B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 				B48209DD283EBA410030F49B /* ServiceViewModel */,
 				B48209CD283EAD730030F49B /* Models */,
 				B48209CE283EAD9C0030F49B /* Views */,
+				B40E3D832857F9EA007931AD /* Utils */,
 				B48209E5283EED000030F49B /* Mocks */,
 				B4DAF977283B150F007842F3 /* Assets.xcassets */,
 				B4DAF979283B150F007842F3 /* Preview Content */,
@@ -269,6 +280,7 @@
 				B48209ED283F05BB0030F49B /* ViewModelImageInformation.swift in Sources */,
 				B40F6870284E83CC004595DB /* ModeloDetailView.swift in Sources */,
 				B4DAF982283B43C6007842F3 /* Menu.swift in Sources */,
+				B40E3D852857FA46007931AD /* mocks.swift in Sources */,
 				B40F6872284E8C0D004595DB /* DestinationDetailViewModel.swift in Sources */,
 				B4AA3ADF2842B07A0035B5F2 /* HomeView.swift in Sources */,
 				B4DAF976283B150E007842F3 /* ContentView.swift in Sources */,
