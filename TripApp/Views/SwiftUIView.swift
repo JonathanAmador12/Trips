@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct Home: View {
-    var places: [Place]
+    var destinationCategories: [DestinationCategory]
     var destination: [Destination]
     var imag: [ImageInformation]
     
@@ -39,14 +39,14 @@ struct Home: View {
             
             ScrollView(.horizontal){
                 HStack(spacing:  50){
-                    ForEach(places) { place in
+                    ForEach(destinationCategories) { destinationCategory in
                         Button(action: {
-                            selecttionPlace = place.id
+                            selecttionPlace = destinationCategory.id
                         }) {
-                            Text(place.name)
-                                .foregroundColor(place.id == selecttionPlace ? .red : .gray)
-                                .font(place.id == selecttionPlace ? .title2 : .body)
-                                .fontWeight(place.id == selecttionPlace ? .heavy : .regular)
+                            Text(destinationCategory.name)
+                                .foregroundColor(destinationCategory.id == selecttionPlace ? .red : .gray)
+                                .font(destinationCategory.id == selecttionPlace ? .title2 : .body)
+                                .fontWeight(destinationCategory.id == selecttionPlace ? .heavy : .regular)
                         }
                     }
                 }
@@ -148,26 +148,13 @@ struct Home: View {
 struct SwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
-//        let places: [Place] = [
-//            Place(id: 1, name: "santa monica"),
-//            Place(id: 2, name: "san arnol")
-//        ]
-        let places: [Place] = getDataListFromMockFile(fileName: "MockPlace") ?? []
+        let categories: [DestinationCategory] = getDataListFromMockFile(fileName: "MockDestinationCategories") ?? []
         let destination: [Destination] = getDataListFromMockFile(fileName: "MockDestinos") ?? []
         let image: [ImageInformation] = getDataListFromMockFile(fileName: "MockImage") ?? []
         
-
-//        let destination: [Destination] = [
-//            Destination(id: 1, name: "mar persico", place: "rusia", imageUrl: "http://localhost:9000/trips2/cancun.jpeg"),
-//            Destination(id: 2, name: "mar mediterranio", place: "canada", imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
-//        ]
-//        let image: [ImageInformation] = [
-//            ImageInformation(id: 1, name: "playa del carmen", location: "cuba", rate: 10.0, imageUrl: "http://localhost:9000/trips2/filipinas.jpeg")
-//        ]
-        
         NavigationView {
             Home(
-                places: places,
+                destinationCategories: categories,
                 destination: destination,
                 imag: image,
                 isSearchBarActive: .constant(false)
