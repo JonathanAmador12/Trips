@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var destinationCategoryMV = DestinationCategoryViewModel()
-    @ObservedObject var possibleDestinations = ViewModelDestino()
+    @ObservedObject var destinationVM = DestinoViewModel()
     @ObservedObject var possibleImage = ViewModelImageInformation()
     
     @State var isSearchBarActive: Bool = false
@@ -20,7 +20,7 @@ struct HomeView: View {
             // Layer 1
             Home(
                 destinationCategories: destinationCategoryMV.destinationCategories,
-                destination: possibleDestinations.destinations,
+                topDestinations: destinationVM.destinations,
                 imag: possibleImage.images,
                 isSearchBarActive: $isSearchBarActive
             )
@@ -32,7 +32,8 @@ struct HomeView: View {
         }
         .onAppear{
             destinationCategoryMV.getDestinationCategories()
-            possibleDestinations.getDestination2()
+            // TODO: Send the correct place
+            destinationVM.getTopDestination(place: "")
             possibleImage.getImage()
         }
     }

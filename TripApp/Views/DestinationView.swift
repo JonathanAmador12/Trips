@@ -42,10 +42,7 @@ struct DestinationView: View {
 
 struct DestinationView_Previews: PreviewProvider {
     static var previews: some View {
-        let destinations = [
-            Destination(id: 1, name: "no importa", place: "everywhere", imageUrl: "algo3"),
-            Destination(id: 2, name: "no importa", place: "everywhwre", imageUrl: "algo4")
-        ]
+        let destinations: [Destination] = getDataListFromMockFile(fileName: "MockTopDestinations") ?? []
         NavigationView {
             DestinationView(destinations: destinations)
                 .navigationBarHidden(true)

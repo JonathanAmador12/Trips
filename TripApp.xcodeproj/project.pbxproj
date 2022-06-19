@@ -24,11 +24,11 @@
 		B48209D4283EAE8E0030F49B /* ImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209D3283EAE8E0030F49B /* ImageInformation.swift */; };
 		B48209D6283EAFCA0030F49B /* MockDestinationCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */; };
 		B48209DA283EB2CF0030F49B /* MockImage.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D9283EB2CF0030F49B /* MockImage.json */; };
-		B48209DC283EB5EA0030F49B /* MockDestinos.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209DB283EB5EA0030F49B /* MockDestinos.json */; };
+		B48209DC283EB5EA0030F49B /* MockTopDestinations.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209DB283EB5EA0030F49B /* MockTopDestinations.json */; };
 		B48209E0283EBAE90030F49B /* DestinationCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209DF283EBAE90030F49B /* DestinationCategoryViewModel.swift */; };
 		B48209E2283EBCAF0030F49B /* DestinationCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E1283EBCAF0030F49B /* DestinationCategoryService.swift */; };
 		B48209E4283ED0D50030F49B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E3283ED0D50030F49B /* APIError.swift */; };
-		B48209E7283EF1070030F49B /* ViewModelDestino.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E6283EF1070030F49B /* ViewModelDestino.swift */; };
+		B48209E7283EF1070030F49B /* DestinoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E6283EF1070030F49B /* DestinoViewModel.swift */; };
 		B48209E9283EF1CD0030F49B /* ServiceDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E8283EF1CD0030F49B /* ServiceDestination.swift */; };
 		B48209EB283EFEDD0030F49B /* ServiceImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */; };
 		B48209ED283F05BB0030F49B /* ViewModelImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */; };
@@ -58,11 +58,11 @@
 		B48209D3283EAE8E0030F49B /* ImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInformation.swift; sourceTree = "<group>"; };
 		B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDestinationCategories.json; sourceTree = "<group>"; };
 		B48209D9283EB2CF0030F49B /* MockImage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockImage.json; sourceTree = "<group>"; };
-		B48209DB283EB5EA0030F49B /* MockDestinos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDestinos.json; sourceTree = "<group>"; };
+		B48209DB283EB5EA0030F49B /* MockTopDestinations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockTopDestinations.json; sourceTree = "<group>"; };
 		B48209DF283EBAE90030F49B /* DestinationCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCategoryViewModel.swift; sourceTree = "<group>"; };
 		B48209E1283EBCAF0030F49B /* DestinationCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCategoryService.swift; sourceTree = "<group>"; };
 		B48209E3283ED0D50030F49B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		B48209E6283EF1070030F49B /* ViewModelDestino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDestino.swift; sourceTree = "<group>"; };
+		B48209E6283EF1070030F49B /* DestinoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinoViewModel.swift; sourceTree = "<group>"; };
 		B48209E8283EF1CD0030F49B /* ServiceDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDestination.swift; sourceTree = "<group>"; };
 		B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceImageInformation.swift; sourceTree = "<group>"; };
 		B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelImageInformation.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B48209DF283EBAE90030F49B /* DestinationCategoryViewModel.swift */,
-				B48209E6283EF1070030F49B /* ViewModelDestino.swift */,
+				B48209E6283EF1070030F49B /* DestinoViewModel.swift */,
 				B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */,
 				B40F6871284E8C0D004595DB /* DestinationDetailViewModel.swift */,
 			);
@@ -150,7 +150,7 @@
 			children = (
 				B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */,
 				B48209D9283EB2CF0030F49B /* MockImage.json */,
-				B48209DB283EB5EA0030F49B /* MockDestinos.json */,
+				B48209DB283EB5EA0030F49B /* MockTopDestinations.json */,
 				B463182A28483826009D9DA7 /* Information.json */,
 				B40F686D284E7E91004595DB /* MockPlaceWithReview.json */,
 			);
@@ -264,7 +264,7 @@
 			files = (
 				B40F686E284E7E91004595DB /* MockPlaceWithReview.json in Resources */,
 				B4DAF97B283B150F007842F3 /* Preview Assets.xcassets in Resources */,
-				B48209DC283EB5EA0030F49B /* MockDestinos.json in Resources */,
+				B48209DC283EB5EA0030F49B /* MockTopDestinations.json in Resources */,
 				B463182B28483826009D9DA7 /* Information.json in Resources */,
 				B48209D6283EAFCA0030F49B /* MockDestinationCategories.json in Resources */,
 				B4DAF978283B150F007842F3 /* Assets.xcassets in Resources */,
@@ -298,7 +298,7 @@
 				B4DAF984283B45E9007842F3 /* SwiftUIView.swift in Sources */,
 				B4DAF974283B150E007842F3 /* TripAppApp.swift in Sources */,
 				B436862C284450F7006DEE16 /* SearchView.swift in Sources */,
-				B48209E7283EF1070030F49B /* ViewModelDestino.swift in Sources */,
+				B48209E7283EF1070030F49B /* DestinoViewModel.swift in Sources */,
 				B48209D0283EADF80030F49B /* DestinationCategory.swift in Sources */,
 				B48209EB283EFEDD0030F49B /* ServiceImageInformation.swift in Sources */,
 				B40F6877284EC13D004595DB /* DestinationDeatil.swift in Sources */,
