@@ -19,14 +19,14 @@
 		B436862C284450F7006DEE16 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B436862B284450F7006DEE16 /* SearchView.swift */; };
 		B461E4C6285E639F00672B2C /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461E4C5285E639F00672B2C /* constants.swift */; };
 		B463182B28483826009D9DA7 /* Information.json in Resources */ = {isa = PBXBuildFile; fileRef = B463182A28483826009D9DA7 /* Information.json */; };
-		B48209D0283EADF80030F49B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209CF283EADF80030F49B /* Place.swift */; };
+		B48209D0283EADF80030F49B /* DestinationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209CF283EADF80030F49B /* DestinationCategory.swift */; };
 		B48209D2283EAE500030F49B /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209D1283EAE500030F49B /* Destination.swift */; };
 		B48209D4283EAE8E0030F49B /* ImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209D3283EAE8E0030F49B /* ImageInformation.swift */; };
-		B48209D6283EAFCA0030F49B /* MockPlace.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D5283EAFCA0030F49B /* MockPlace.json */; };
+		B48209D6283EAFCA0030F49B /* MockDestinationCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */; };
 		B48209DA283EB2CF0030F49B /* MockImage.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D9283EB2CF0030F49B /* MockImage.json */; };
 		B48209DC283EB5EA0030F49B /* MockDestinos.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209DB283EB5EA0030F49B /* MockDestinos.json */; };
-		B48209E0283EBAE90030F49B /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209DF283EBAE90030F49B /* PlaceViewModel.swift */; };
-		B48209E2283EBCAF0030F49B /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E1283EBCAF0030F49B /* PlaceService.swift */; };
+		B48209E0283EBAE90030F49B /* DestinationCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209DF283EBAE90030F49B /* DestinationCategoryViewModel.swift */; };
+		B48209E2283EBCAF0030F49B /* DestinationCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E1283EBCAF0030F49B /* DestinationCategoryService.swift */; };
 		B48209E4283ED0D50030F49B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E3283ED0D50030F49B /* APIError.swift */; };
 		B48209E7283EF1070030F49B /* ViewModelDestino.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E6283EF1070030F49B /* ViewModelDestino.swift */; };
 		B48209E9283EF1CD0030F49B /* ServiceDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E8283EF1CD0030F49B /* ServiceDestination.swift */; };
@@ -53,14 +53,14 @@
 		B436862B284450F7006DEE16 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B461E4C5285E639F00672B2C /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		B463182A28483826009D9DA7 /* Information.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Information.json; sourceTree = "<group>"; };
-		B48209CF283EADF80030F49B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		B48209CF283EADF80030F49B /* DestinationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCategory.swift; sourceTree = "<group>"; };
 		B48209D1283EAE500030F49B /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		B48209D3283EAE8E0030F49B /* ImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInformation.swift; sourceTree = "<group>"; };
-		B48209D5283EAFCA0030F49B /* MockPlace.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPlace.json; sourceTree = "<group>"; };
+		B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDestinationCategories.json; sourceTree = "<group>"; };
 		B48209D9283EB2CF0030F49B /* MockImage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockImage.json; sourceTree = "<group>"; };
 		B48209DB283EB5EA0030F49B /* MockDestinos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDestinos.json; sourceTree = "<group>"; };
-		B48209DF283EBAE90030F49B /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
-		B48209E1283EBCAF0030F49B /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		B48209DF283EBAE90030F49B /* DestinationCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCategoryViewModel.swift; sourceTree = "<group>"; };
+		B48209E1283EBCAF0030F49B /* DestinationCategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCategoryService.swift; sourceTree = "<group>"; };
 		B48209E3283ED0D50030F49B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		B48209E6283EF1070030F49B /* ViewModelDestino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDestino.swift; sourceTree = "<group>"; };
 		B48209E8283EF1CD0030F49B /* ServiceDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDestination.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		B48209CD283EAD730030F49B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B48209CF283EADF80030F49B /* Place.swift */,
+				B48209CF283EADF80030F49B /* DestinationCategory.swift */,
 				B48209D1283EAE500030F49B /* Destination.swift */,
 				B48209D3283EAE8E0030F49B /* ImageInformation.swift */,
 				B40F686F284E83CC004595DB /* ModeloDetailView.swift */,
@@ -126,7 +126,7 @@
 		B48209DD283EBA410030F49B /* ServiceViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B48209E1283EBCAF0030F49B /* PlaceService.swift */,
+				B48209E1283EBCAF0030F49B /* DestinationCategoryService.swift */,
 				B48209E8283EF1CD0030F49B /* ServiceDestination.swift */,
 				B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */,
 				B40F6873284E8CDD004595DB /* DestinationDetailService.swift */,
@@ -137,7 +137,7 @@
 		B48209DE283EBAAC0030F49B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B48209DF283EBAE90030F49B /* PlaceViewModel.swift */,
+				B48209DF283EBAE90030F49B /* DestinationCategoryViewModel.swift */,
 				B48209E6283EF1070030F49B /* ViewModelDestino.swift */,
 				B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */,
 				B40F6871284E8C0D004595DB /* DestinationDetailViewModel.swift */,
@@ -148,7 +148,7 @@
 		B48209E5283EED000030F49B /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				B48209D5283EAFCA0030F49B /* MockPlace.json */,
+				B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */,
 				B48209D9283EB2CF0030F49B /* MockImage.json */,
 				B48209DB283EB5EA0030F49B /* MockDestinos.json */,
 				B463182A28483826009D9DA7 /* Information.json */,
@@ -266,7 +266,7 @@
 				B4DAF97B283B150F007842F3 /* Preview Assets.xcassets in Resources */,
 				B48209DC283EB5EA0030F49B /* MockDestinos.json in Resources */,
 				B463182B28483826009D9DA7 /* Information.json in Resources */,
-				B48209D6283EAFCA0030F49B /* MockPlace.json in Resources */,
+				B48209D6283EAFCA0030F49B /* MockDestinationCategories.json in Resources */,
 				B4DAF978283B150F007842F3 /* Assets.xcassets in Resources */,
 				B48209DA283EB2CF0030F49B /* MockImage.json in Resources */,
 			);
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B48209E0283EBAE90030F49B /* PlaceViewModel.swift in Sources */,
+				B48209E0283EBAE90030F49B /* DestinationCategoryViewModel.swift in Sources */,
 				B48209ED283F05BB0030F49B /* ViewModelImageInformation.swift in Sources */,
 				B40F6870284E83CC004595DB /* ModeloDetailView.swift in Sources */,
 				B4DAF982283B43C6007842F3 /* Menu.swift in Sources */,
@@ -290,7 +290,7 @@
 				B48209E4283ED0D50030F49B /* APIError.swift in Sources */,
 				B40F6874284E8CDD004595DB /* DestinationDetailService.swift in Sources */,
 				B48209D4283EAE8E0030F49B /* ImageInformation.swift in Sources */,
-				B48209E2283EBCAF0030F49B /* PlaceService.swift in Sources */,
+				B48209E2283EBCAF0030F49B /* DestinationCategoryService.swift in Sources */,
 				B48209E9283EF1CD0030F49B /* ServiceDestination.swift in Sources */,
 				B414F53928454623002A91ED /* DestinationView.swift in Sources */,
 				B48209D2283EAE500030F49B /* Destination.swift in Sources */,
@@ -299,7 +299,7 @@
 				B4DAF974283B150E007842F3 /* TripAppApp.swift in Sources */,
 				B436862C284450F7006DEE16 /* SearchView.swift in Sources */,
 				B48209E7283EF1070030F49B /* ViewModelDestino.swift in Sources */,
-				B48209D0283EADF80030F49B /* Place.swift in Sources */,
+				B48209D0283EADF80030F49B /* DestinationCategory.swift in Sources */,
 				B48209EB283EFEDD0030F49B /* ServiceImageInformation.swift in Sources */,
 				B40F6877284EC13D004595DB /* DestinationDeatil.swift in Sources */,
 				B461E4C6285E639F00672B2C /* constants.swift in Sources */,

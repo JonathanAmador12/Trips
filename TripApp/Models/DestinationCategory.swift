@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Place: Identifiable, Decodable {
+struct DestinationCategory: Identifiable, Decodable {
     var id: Int
     var name: String
 }
