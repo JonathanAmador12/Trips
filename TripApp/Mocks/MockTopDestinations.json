@@ -2,55 +2,64 @@
     {
         "id": 1,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/cancun.jpeg"
     },
     {
         "id": 2,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/filipinas.jpeg"
     },
     {
         "id": 3,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/islasCayman.jpeg"
     },
     {
         "id": 4,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/mady.jpeg"
     },
     {
         "id": 5,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/cancun.jpeg"
     },
     {
         "id": 6,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/filipinas.jpeg"
     },
     {
         "id": 7,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/islasCayman.jpeg"
     },
     {
         "id": 8,
         "name": "california",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/mady.jpeg"
     },
     {
         "id": 9,
         "name": "arnol",
-        "place": "Haway",
+        "location": "Haway",
+        "rate": 5.0,
         "imageUrl": "http://localhost:9000/trips2/cancun.jpeg"
     }
 ]

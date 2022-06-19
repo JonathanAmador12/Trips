@@ -10,7 +10,7 @@ import Kingfisher
 
 struct Home: View {
     var destinationCategories: [DestinationCategory]
-    var destination: [Destination]
+    var topDestinations: [Destination]
     var imag: [ImageInformation]
     
     @State var selecttionPlace = 1
@@ -105,7 +105,7 @@ struct Home: View {
             
             ScrollView(.horizontal){
                 HStack(spacing: 40) {
-                    ForEach(destination) { destino in
+                    ForEach(topDestinations) { destino in
                         NavigationLink {
                             DestinationDeatil(id: destino.id)
                         } label: {
@@ -129,7 +129,7 @@ struct Home: View {
                                     VStack(alignment: .leading){
                                         Text(destino.name)
                                             .foregroundColor(.blue)
-                                        Text(destino.place)
+                                        Text(destino.location)
                                             .foregroundColor(.blue)
                                     }
                                 }
@@ -149,13 +149,13 @@ struct SwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
         let categories: [DestinationCategory] = getDataListFromMockFile(fileName: "MockDestinationCategories") ?? []
-        let destination: [Destination] = getDataListFromMockFile(fileName: "MockDestinos") ?? []
+        let topDestination: [Destination] = getDataListFromMockFile(fileName: "MockTopDestinations") ?? []
         let image: [ImageInformation] = getDataListFromMockFile(fileName: "MockImage") ?? []
         
         NavigationView {
             Home(
                 destinationCategories: categories,
-                destination: destination,
+                topDestinations: topDestination,
                 imag: image,
                 isSearchBarActive: .constant(false)
             )

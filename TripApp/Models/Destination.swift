@@ -10,6 +10,7 @@ import Foundation
 struct Destination: Identifiable, Decodable {
     var id: Int
     var name: String
-    var place: String
+    var location: String
+    var rate: Float
     var imageUrl: String
 }

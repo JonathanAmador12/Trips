@@ -16,7 +16,7 @@ struct SearchView: View {
     // esta propiedad va almacenar si un textField esta siendo enfocado
     @FocusState var isFocused: Bool
     
-    @ObservedObject var viewModelDestination  = ViewModelDestino()
+    @ObservedObject var destinationVM  = DestinoViewModel()
     
     var body: some View {
         VStack{
@@ -49,14 +49,14 @@ struct SearchView: View {
             }
             .padding(.top, 1)
             .onChange(of: search) { newValue in
-                viewModelDestination.getDestination(place: search)
+                destinationVM.getTopDestination(place: search)
                 print("arnol")
             }
             .padding(2)
             
             
             ScrollView{
-                DestinationView(destinations: viewModelDestination.destinations);
+                DestinationView(destinations: destinationVM.destinations);
             }
             
             Spacer()
