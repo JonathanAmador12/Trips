@@ -12,6 +12,8 @@ struct SearchView: View {
     @Binding var isSearchBarActive: Bool
     
     @State var search: String = ""
+    // significa que es para manejar la memoria y pertenece al estado de la vista
+    // esta propiedad va almacenar si un textField esta siendo enfocado
     @FocusState var isFocused: Bool
     
     @ObservedObject var viewModelDestination  = ViewModelDestino()

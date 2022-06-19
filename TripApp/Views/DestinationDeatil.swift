@@ -4,6 +4,8 @@ import SwiftUI
 
 struct DestinationDeatil: View{
     
+    var id: Int
+    
     @ObservedObject var destinationDetailViewModel = DestinationDetailViewModel()
     
     var body: some View{
@@ -13,7 +15,7 @@ struct DestinationDeatil: View{
         }else {
             ProgressView()
                 .onAppear{
-                    destinationDetailViewModel.getDetails()
+                    destinationDetailViewModel.getDetails(destinationId: id)
                 }
         }
     }
@@ -21,6 +23,7 @@ struct DestinationDeatil: View{
 
 struct DestinationDeatil_Previews: PreviewProvider {
     static var previews: some View {
-        DestinationDeatil()
+        var id = 1
+        DestinationDeatil(id: id)
     }
 }

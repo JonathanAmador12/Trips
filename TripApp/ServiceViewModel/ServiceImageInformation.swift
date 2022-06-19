@@ -14,33 +14,42 @@ class ServiceImageInformation{
         var result: Result<[ImageInformation], APIError>
         
         // este el camino ose el path
-        guard let mockPath = Bundle.main.path(forResource: "MockImage", ofType: "json") else {
+        guard let url = URL(string: "\(baseUrl)/destinations/") else{
             result = .failure(.badUrl)
             handler(result)
             return
         }
-        do{
+        
+        // necesitamos haver una request
+        
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            var result: Result<[ImageInformation], APIError>
             
-            let mockFileContent: String = try String(contentsOfFile: mockPath)
+            guard let newReponse = response as? HTTPURLResponse else{
+                return
+            }
             
-            // nesesitamos pasarlo a DATA apara que swift lo entienda
+            if newReponse.statusCode == 400{
+                result = .failure(.badResponse)
+                handler(result)
+            }
             
-            guard let mockData: Data = mockFileContent.data(using: .utf8) else {
+            guard let jsonData = data else{
+                return
+            }
+            
+            guard let beachs = try? JSONDecoder().decode([ImageInformation].self, from: jsonData) else{
                 result = .failure(.badDecode)
                 handler(result)
                 return
             }
             
-            let images = try JSONDecoder().decode([ImageInformation].self, from: mockData)
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                let result: Result<[ImageInformation], APIError> = .success(images)
-                handler(result)
-            }
-            
-        }catch{
-            result = .failure(.badDecode)
+            result = .success(beachs)
             handler(result)
-        }
+            
+        }.resume()
+        
+        
     }
 }
