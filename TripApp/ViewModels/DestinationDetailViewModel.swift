@@ -11,10 +11,10 @@ class DestinationDetailViewModel: ObservableObject{
     
     @Published var detail: DestinationDetailModel?
     
-    func getDetails(){
+    func getDetails(destinationId: Int){
         let service = DestinationDetailService()
         
-        service.getDetail {[weak self] result in
+        service.getDetail(destinationId: destinationId){[weak self] result in
             switch result{
             case .success(let deatil):
                 DispatchQueue.main.async {

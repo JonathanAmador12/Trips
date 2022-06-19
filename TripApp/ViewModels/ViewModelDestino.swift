@@ -16,8 +16,7 @@ class ViewModelDestino: ObservableObject {
 
         let service = ServiceDestination()
         
-        service.getDestination(place: place){[weak self] result in
-            self?.isLoading = false
+        service.getDestination(){[weak self] result in
 
             switch result{
             case .success(let destinations):
@@ -26,6 +25,10 @@ class ViewModelDestino: ObservableObject {
                 }
             case.failure(let error):
                 print("\(error)")
+            }
+            
+            DispatchQueue.main.async {
+                self?.isLoading = false
             }
         }
     }
@@ -36,7 +39,6 @@ class ViewModelDestino: ObservableObject {
         let service = ServiceDestination()
         
         service.getDestination2 {[weak self] result in
-            self?.isLoading = false
 
             switch result{
             case .success(let destinations):
@@ -45,6 +47,9 @@ class ViewModelDestino: ObservableObject {
                 }
             case.failure(let error):
                 print("\(error)")
+            }
+            DispatchQueue.main.async {
+                self?.isLoading = false
             }
         }
     }

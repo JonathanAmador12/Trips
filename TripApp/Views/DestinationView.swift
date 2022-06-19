@@ -17,7 +17,7 @@ struct DestinationView: View {
         VStack(spacing: 5){
             ForEach(destinations) { newVista in
                 NavigationLink {
-                    DestinationDeatil()
+                    DestinationDeatil(id: newVista.id)
                 } label: {
                     HStack {
                         HStack {

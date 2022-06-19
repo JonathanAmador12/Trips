@@ -9,44 +9,56 @@ import Foundation
 
 class ServiceDestination{
     
-    func getDestination(place: String, handler: @escaping (Result <[Destination], APIError>)-> Void){
-        
+    func getDestination(handler: @escaping (Result <[Destination], APIError>)-> Void){
         var result: Result<[Destination], APIError>
         
-        guard let mockPath = Bundle.main.path(forResource: "MockDestinos", ofType: "json") else {
+        let urlString = "\(baseUrl)/destinations"
+        // Descompone una url en sus componentes: schema, host, etc.
+        guard var componests = URLComponents(string: urlString) else {
             result = .failure(.badUrl)
+            handler(result)
+            return
+        }
+        let params: [URLQueryItem] = [
+            URLQueryItem(name: "top_destinations", value: "true")
+        ]
+        componests.queryItems = params
+        
+        // Re-construir la url a partir de sus componentes
+        guard let url: URL = componests.url else {
+            result = .failure(.badUrl)
+            handler(result)
             return
         }
         
-        do{
-            let mockFileContent: String = try String(contentsOfFile: mockPath)
-            
-            guard let mockData = mockFileContent.data(using: .utf8) else{
+//        guard let url = URL(string: "\(baseUrl)/destinations/?top_destinations=true") else{
+//            result = .failure(.badUrl)
+//            handler(result)
+//            return
+//        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            var result: Result<[Destination], APIError>
+            guard let newResponse = response as? HTTPURLResponse else {
+                result = .failure(.badResponse)
+                handler(result)
+                return
+            }
+            if newResponse.statusCode == 400{
+                result = .failure(.badResponse)
+                handler(result)
+            }
+            guard let jsonData = data else {
+                return
+            }
+            guard let destinationsTop = try? JSONDecoder().decode([Destination].self, from: jsonData) else{
                 result = .failure(.badDecode)
                 handler(result)
                 return
             }
+            result = .success(destinationsTop)
+            handler(result)
             
-            let destinations = try JSONDecoder().decode([Destination].self, from: mockData)
-            
-            var destinationSelec: [Destination] = []
-            
-            for destination in destinations{
-                
-                if destination.name.contains(place){
-                    destinationSelec.append(destination)
-                }
-                
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                let result: Result<[Destination], APIError> = .success(destinationSelec)
-                handler(result)
-            }
-            
-        }catch{
-            result = .failure(.badDecode)
-        }
+        }.resume()
     }
     
     
@@ -56,33 +68,41 @@ class ServiceDestination{
         
         var result: Result<[Destination], APIError>
         
-        guard let mockPath = Bundle.main.path(forResource: "MockDestinos", ofType: "json") else {
+        let urlString = "\(baseUrl)/destinations"
+        // Descompone una url en sus componentes: schema, host, etc.
+        guard var componests = URLComponents(string: urlString) else {
             result = .failure(.badUrl)
+            handler(result)
+            return
+        }
+        let params: [URLQueryItem] = [
+            URLQueryItem(name: "top_destinations", value: "true")
+        ]
+        componests.queryItems = params
+
+        // Re-construir la url a partir de sus componentes
+        guard let url: URL = componests.url else {
+            result = .failure(.badUrl)
+            handler(result)
             return
         }
         
-        do{
-            let mockFileContent: String = try String(contentsOfFile: mockPath)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            var result: Result<[Destination], APIError>
             
-            guard let mockData = mockFileContent.data(using: .utf8) else{
+            guard let jsonData = data else {
+                return
+            }
+            
+            guard let destinations = try? JSONDecoder().decode([Destination].self, from: jsonData) else{
                 result = .failure(.badDecode)
                 handler(result)
                 return
             }
             
-            let destinations = try JSONDecoder().decode([Destination].self, from: mockData)
+            result = .success(destinations)
+            handler(result)
             
-                
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                
-                let result: Result<[Destination], APIError> = .success(destinations)
-                
-                handler(result)
-                
-            }
-            
-        }catch{
-            result = .failure(.badDecode)
-        }
+        }.resume()
     }
 }

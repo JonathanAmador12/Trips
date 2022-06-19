@@ -59,7 +59,7 @@ struct Home: View {
                     ForEach(imag) { imageP in
                         
                         NavigationLink {
-                            DestinationDeatil()
+                            DestinationDeatil(id: imageP.id)
                         } label: {
                             ZStack {
                                 // capa zero -  fondo
@@ -107,7 +107,7 @@ struct Home: View {
                 HStack(spacing: 40) {
                     ForEach(destination) { destino in
                         NavigationLink {
-                            DestinationDeatil()
+                            DestinationDeatil(id: destino.id)
                         } label: {
                             ZStack {
                                 Color.gray.opacity(0.1)
