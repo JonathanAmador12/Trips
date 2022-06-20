@@ -9,7 +9,7 @@ import Foundation
 
 class ViewModelImageInformation: ObservableObject{
     
-    @Published var images: [ImageInformation] = []
+    @Published var images: [Destination] = []
     
     func getImage(){
         let service = ServiceImageInformation()

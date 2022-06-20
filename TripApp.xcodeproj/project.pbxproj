@@ -21,7 +21,6 @@
 		B463182B28483826009D9DA7 /* Information.json in Resources */ = {isa = PBXBuildFile; fileRef = B463182A28483826009D9DA7 /* Information.json */; };
 		B48209D0283EADF80030F49B /* DestinationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209CF283EADF80030F49B /* DestinationCategory.swift */; };
 		B48209D2283EAE500030F49B /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209D1283EAE500030F49B /* Destination.swift */; };
-		B48209D4283EAE8E0030F49B /* ImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209D3283EAE8E0030F49B /* ImageInformation.swift */; };
 		B48209D6283EAFCA0030F49B /* MockDestinationCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */; };
 		B48209DA283EB2CF0030F49B /* MockImage.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209D9283EB2CF0030F49B /* MockImage.json */; };
 		B48209DC283EB5EA0030F49B /* MockTopDestinations.json in Resources */ = {isa = PBXBuildFile; fileRef = B48209DB283EB5EA0030F49B /* MockTopDestinations.json */; };
@@ -55,7 +54,6 @@
 		B463182A28483826009D9DA7 /* Information.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Information.json; sourceTree = "<group>"; };
 		B48209CF283EADF80030F49B /* DestinationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCategory.swift; sourceTree = "<group>"; };
 		B48209D1283EAE500030F49B /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
-		B48209D3283EAE8E0030F49B /* ImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInformation.swift; sourceTree = "<group>"; };
 		B48209D5283EAFCA0030F49B /* MockDestinationCategories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDestinationCategories.json; sourceTree = "<group>"; };
 		B48209D9283EB2CF0030F49B /* MockImage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockImage.json; sourceTree = "<group>"; };
 		B48209DB283EB5EA0030F49B /* MockTopDestinations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockTopDestinations.json; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			children = (
 				B48209CF283EADF80030F49B /* DestinationCategory.swift */,
 				B48209D1283EAE500030F49B /* Destination.swift */,
-				B48209D3283EAE8E0030F49B /* ImageInformation.swift */,
 				B40F686F284E83CC004595DB /* ModeloDetailView.swift */,
 			);
 			path = Models;
@@ -289,7 +286,6 @@
 				B4DAF976283B150E007842F3 /* ContentView.swift in Sources */,
 				B48209E4283ED0D50030F49B /* APIError.swift in Sources */,
 				B40F6874284E8CDD004595DB /* DestinationDetailService.swift in Sources */,
-				B48209D4283EAE8E0030F49B /* ImageInformation.swift in Sources */,
 				B48209E2283EBCAF0030F49B /* DestinationCategoryService.swift in Sources */,
 				B48209E9283EF1CD0030F49B /* ServiceDestination.swift in Sources */,
 				B414F53928454623002A91ED /* DestinationView.swift in Sources */,

@@ -11,7 +11,7 @@ import Kingfisher
 struct Home: View {
     var destinationCategories: [DestinationCategory]
     var topDestinations: [Destination]
-    var imag: [ImageInformation]
+    var imag: [Destination]
     
     @State var selecttionPlace = 1
     
@@ -150,7 +150,7 @@ struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         let categories: [DestinationCategory] = getDataListFromMockFile(fileName: "MockDestinationCategories") ?? []
         let topDestination: [Destination] = getDataListFromMockFile(fileName: "MockTopDestinations") ?? []
-        let image: [ImageInformation] = getDataListFromMockFile(fileName: "MockImage") ?? []
+        let image: [Destination] = getDataListFromMockFile(fileName: "MockImage") ?? []
         
         NavigationView {
             Home(
