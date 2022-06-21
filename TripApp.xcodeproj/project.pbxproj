@@ -29,8 +29,6 @@
 		B48209E4283ED0D50030F49B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E3283ED0D50030F49B /* APIError.swift */; };
 		B48209E7283EF1070030F49B /* DestinoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E6283EF1070030F49B /* DestinoViewModel.swift */; };
 		B48209E9283EF1CD0030F49B /* ServiceDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209E8283EF1CD0030F49B /* ServiceDestination.swift */; };
-		B48209EB283EFEDD0030F49B /* ServiceImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */; };
-		B48209ED283F05BB0030F49B /* ViewModelImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */; };
 		B4AA3ADF2842B07A0035B5F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA3ADE2842B07A0035B5F2 /* HomeView.swift */; };
 		B4DAF974283B150E007842F3 /* TripAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DAF973283B150E007842F3 /* TripAppApp.swift */; };
 		B4DAF976283B150E007842F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DAF975283B150E007842F3 /* ContentView.swift */; };
@@ -62,8 +60,6 @@
 		B48209E3283ED0D50030F49B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		B48209E6283EF1070030F49B /* DestinoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinoViewModel.swift; sourceTree = "<group>"; };
 		B48209E8283EF1CD0030F49B /* ServiceDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDestination.swift; sourceTree = "<group>"; };
-		B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceImageInformation.swift; sourceTree = "<group>"; };
-		B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelImageInformation.swift; sourceTree = "<group>"; };
 		B4AA3ADE2842B07A0035B5F2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B4DAF970283B150E007842F3 /* TripApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DAF973283B150E007842F3 /* TripAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAppApp.swift; sourceTree = "<group>"; };
@@ -125,7 +121,6 @@
 			children = (
 				B48209E1283EBCAF0030F49B /* DestinationCategoryService.swift */,
 				B48209E8283EF1CD0030F49B /* ServiceDestination.swift */,
-				B48209EA283EFEDD0030F49B /* ServiceImageInformation.swift */,
 				B40F6873284E8CDD004595DB /* DestinationDetailService.swift */,
 			);
 			path = ServiceViewModel;
@@ -136,7 +131,6 @@
 			children = (
 				B48209DF283EBAE90030F49B /* DestinationCategoryViewModel.swift */,
 				B48209E6283EF1070030F49B /* DestinoViewModel.swift */,
-				B48209EC283F05BB0030F49B /* ViewModelImageInformation.swift */,
 				B40F6871284E8C0D004595DB /* DestinationDetailViewModel.swift */,
 			);
 			path = ViewModels;
@@ -277,7 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48209E0283EBAE90030F49B /* DestinationCategoryViewModel.swift in Sources */,
-				B48209ED283F05BB0030F49B /* ViewModelImageInformation.swift in Sources */,
 				B40F6870284E83CC004595DB /* ModeloDetailView.swift in Sources */,
 				B4DAF982283B43C6007842F3 /* Menu.swift in Sources */,
 				B40E3D852857FA46007931AD /* mocks.swift in Sources */,
@@ -296,7 +289,6 @@
 				B436862C284450F7006DEE16 /* SearchView.swift in Sources */,
 				B48209E7283EF1070030F49B /* DestinoViewModel.swift in Sources */,
 				B48209D0283EADF80030F49B /* DestinationCategory.swift in Sources */,
-				B48209EB283EFEDD0030F49B /* ServiceImageInformation.swift in Sources */,
 				B40F6877284EC13D004595DB /* DestinationDeatil.swift in Sources */,
 				B461E4C6285E639F00672B2C /* constants.swift in Sources */,
 			);
