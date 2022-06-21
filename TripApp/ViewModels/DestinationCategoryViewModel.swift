@@ -12,6 +12,9 @@ class DestinationCategoryViewModel:ObservableObject {
     
     func getDestinationCategories(){
         let service = DestinationCategoryService()
+        // Recuperar las categorias
+        // Como no sabemos cuanto va a tardar, o cuado los datos van a llegar decidimos delegarle una tarea a la funcion
+        // Dicha tarea se va a ejecutar una vez que ya tenemos los datos.
         service.get {[weak self] result in
             switch result {
             case .success(let destinationCategories):

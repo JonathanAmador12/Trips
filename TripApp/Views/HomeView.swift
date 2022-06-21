@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var destinationCategoryMV = DestinationCategoryViewModel()
     @ObservedObject var destinationVM = DestinoViewModel()
-    @ObservedObject var possibleImage = ViewModelImageInformation()
     
     @State var isSearchBarActive: Bool = false
     
@@ -20,8 +19,8 @@ struct HomeView: View {
             // Layer 1
             Home(
                 destinationCategories: destinationCategoryMV.destinationCategories,
-                topDestinations: destinationVM.destinations,
-                imag: possibleImage.images,
+                topDestinations: destinationVM.topDestinations,
+                destinations: destinationVM.destinations,
                 isSearchBarActive: $isSearchBarActive
             )
             
@@ -31,10 +30,12 @@ struct HomeView: View {
             }
         }
         .onAppear{
+            // recibe como parametro un handler, closure porque le queremos delegar una tarea a esta funcion.
             destinationCategoryMV.getDestinationCategories()
-            // TODO: Send the correct place
-            destinationVM.getTopDestination(place: "")
-            possibleImage.getImage()
+            // TODO: Send the correct categoryId
+            destinationVM.getTopDestination(categoryId: 1)
+            destinationVM.getDestinations(categoryId: 1)
+            
         }
     }
 }

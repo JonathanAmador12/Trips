@@ -49,14 +49,14 @@ struct SearchView: View {
             }
             .padding(.top, 1)
             .onChange(of: search) { newValue in
-                destinationVM.getTopDestination(place: search)
+                destinationVM.getDestinations(searchQuery: search)
                 print("arnol")
             }
             .padding(2)
             
             
             ScrollView{
-                DestinationView(destinations: destinationVM.destinations);
+                DestinationView(destinations: destinationVM.topDestinations);
             }
             
             Spacer()

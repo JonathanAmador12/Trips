@@ -11,8 +11,8 @@ import Kingfisher
 struct Home: View {
     var destinationCategories: [DestinationCategory]
     var topDestinations: [Destination]
-    var imag: [Destination]
-    
+    var destinations: [Destination]
+
     @State var selecttionPlace = 1
     
     @Binding var isSearchBarActive: Bool
@@ -56,7 +56,7 @@ struct Home: View {
             
             ScrollView(.horizontal){
                 HStack(spacing: 50){
-                    ForEach(imag) { imageP in
+                    ForEach(destinations) { imageP in
                         
                         NavigationLink {
                             DestinationDeatil(id: imageP.id)
@@ -156,7 +156,7 @@ struct SwiftUIView_Previews: PreviewProvider {
             Home(
                 destinationCategories: categories,
                 topDestinations: topDestination,
-                imag: image,
+                destinations: image,
                 isSearchBarActive: .constant(false)
             )
                 .navigationBarHidden(true)
