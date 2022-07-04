@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DestinationCategory: Identifiable, Decodable {
+struct DestinationCategory: Identifiable, Decodable, Equatable {
     var id: Int
     var name: String
 }
