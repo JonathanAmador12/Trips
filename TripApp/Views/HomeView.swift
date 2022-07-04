@@ -13,6 +13,7 @@ struct HomeView: View {
     
     @State var isSearchBarActive: Bool = false
     
+    @State var selecttionPlace: Int = 0
     
     var body: some View {
         ZStack {
@@ -21,7 +22,8 @@ struct HomeView: View {
                 destinationCategories: destinationCategoryMV.destinationCategories,
                 topDestinations: destinationVM.topDestinations,
                 destinations: destinationVM.destinations,
-                isSearchBarActive: $isSearchBarActive
+                isSearchBarActive: $isSearchBarActive,
+                selecttionPlace: $selecttionPlace
             )
             
             // layer 2
@@ -31,11 +33,14 @@ struct HomeView: View {
         }
         .onAppear{
             // recibe como parametro un handler, closure porque le queremos delegar una tarea a esta funcion.
-            destinationCategoryMV.getDestinationCategories()
-            // TODO: Send the correct categoryId
-            destinationVM.getTopDestination(categoryId: 1)
-            destinationVM.getDestinations(categoryId: 1)
-            
+            destinationCategoryMV.getDestinationCategories { (categories: [DestinationCategory]) in
+                let firstCategory = categories[0]
+                selecttionPlace = firstCategory.id
+            }
+        }
+        .onChange(of: selecttionPlace) { id in
+            destinationVM.getTopDestination(categoryId: id)
+            destinationVM.getDestinationsByCategoryId(categoryId: id)
         }
     }
 }

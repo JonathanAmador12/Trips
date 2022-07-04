@@ -10,7 +10,7 @@ import Foundation
 class DestinationCategoryViewModel:ObservableObject {
     @Published var destinationCategories: [DestinationCategory] = []
     
-    func getDestinationCategories(){
+    func getDestinationCategories(handler: @escaping ([DestinationCategory])->Void){
         let service = DestinationCategoryService()
         // Recuperar las categorias
         // Como no sabemos cuanto va a tardar, o cuado los datos van a llegar decidimos delegarle una tarea a la funcion
@@ -21,6 +21,7 @@ class DestinationCategoryViewModel:ObservableObject {
                 DispatchQueue.main.async {
                     self?.destinationCategories = destinationCategories
                 }
+                handler(destinationCategories)
             case .failure(let error):
                 print("\(error)")
             }

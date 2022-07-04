@@ -7,4 +7,4 @@
 
 import Foundation
 
-let baseUrl: String = "https://edfa2abf-8d5e-426e-80a1-5f0b5b7930c7.mock.pstmn.io"
+let baseUrl: String = "https://d5ff70b1-02fe-42ee-9b2e-1fde3d4720ee.mock.pstmn.io"

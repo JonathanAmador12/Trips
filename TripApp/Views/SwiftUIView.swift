@@ -13,9 +13,11 @@ struct Home: View {
     var topDestinations: [Destination]
     var destinations: [Destination]
 
-    @State var selecttionPlace = 1
     
     @Binding var isSearchBarActive: Bool
+    
+    @Binding var selecttionPlace: Int
+    
     
     var body: some View {
         
@@ -157,7 +159,8 @@ struct SwiftUIView_Previews: PreviewProvider {
                 destinationCategories: categories,
                 topDestinations: topDestination,
                 destinations: image,
-                isSearchBarActive: .constant(false)
+                isSearchBarActive: .constant(false),
+                selecttionPlace: .constant(0)
             )
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)

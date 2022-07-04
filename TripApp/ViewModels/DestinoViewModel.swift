@@ -17,7 +17,7 @@ class DestinoViewModel: ObservableObject {
 
         let service = ServiceDestination()
         
-        service.getTopDestination(){[weak self] result in
+        service.getTopDestination(categoriId: categoryId){[weak self] result in
 
             switch result{
             case .success(let destinations):
@@ -34,10 +34,10 @@ class DestinoViewModel: ObservableObject {
         }
     }
     
-    func getDestinations(categoryId: Int) {
+    func getDestinationsByCategoryId(categoryId: Int) {
         let service = ServiceDestination()
 
-        service.getDestinations(categoryId: categoryId) { [weak self] result in
+        service.getDestinationsByCategoryId(categoryId: categoryId) { [weak self] result in
             switch result{
             case .success(let destinations):
                 DispatchQueue.main.async {
@@ -55,7 +55,8 @@ class DestinoViewModel: ObservableObject {
 
         let service = ServiceDestination()
         
-        service.getTopDestination(){[weak self] result in
+        // TODO: we need to create a new service to handle this case.
+        service.getTopDestination(categoriId: 1){[weak self] result in
 
             switch result{
             case .success(let destinations):

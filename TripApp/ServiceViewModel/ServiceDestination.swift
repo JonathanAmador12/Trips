@@ -9,7 +9,7 @@ import Foundation
 
 class ServiceDestination {
     
-    func getTopDestination(handler: @escaping (Result <[Destination], APIError>)-> Void) {
+    func getTopDestination(categoriId: Int, handler: @escaping (Result <[Destination], APIError>)-> Void) {
         var result: Result<[Destination], APIError>
         
         let urlString = "\(baseUrl)/destinations"
@@ -20,7 +20,8 @@ class ServiceDestination {
             return
         }
         let params: [URLQueryItem] = [
-            URLQueryItem(name: "top_destinations", value: "true")
+            URLQueryItem(name: "top_destinations", value: "true"),
+            URLQueryItem(name: "category_id", value: "categoriId")
         ]
         componests.queryItems = params
         
@@ -33,6 +34,7 @@ class ServiceDestination {
 
         URLSession.shared.dataTask(with: url) { data, response, error in
             var result: Result<[Destination], APIError>
+            
             guard let newResponse = response as? HTTPURLResponse else {
                 result = .failure(.badResponse)
                 handler(result)
@@ -55,11 +57,27 @@ class ServiceDestination {
         }.resume()
     }
 
-    func getDestinations(categoryId: Int, handler: @escaping (Result<[Destination], APIError>)-> Void) {
+    func getDestinationsByCategoryId(categoryId: Int, handler: @escaping (Result<[Destination], APIError>)-> Void) {
         var result: Result<[Destination], APIError>
         
         // este el camino ose el path
-        guard let url = URL(string: "\(baseUrl)/destinations/") else{
+        let urlString = "\(baseUrl)/destinations/"
+        
+        // we need to descompose URL
+        
+        guard var componets = URLComponents(string: urlString) else{
+            result = .failure(.badUrl)
+            handler(result)
+            return
+        }
+        
+        let param: [URLQueryItem] = [
+            URLQueryItem(name: "category_id", value: String(categoryId))
+        ]
+        
+        componets.queryItems = param
+        
+        guard let url: URL = componets.url else{
             result = .failure(.badUrl)
             handler(result)
             return
